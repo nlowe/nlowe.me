@@ -1,0 +1,4 @@
+title: Cake.MiniCover
+link: https://github.com/nlowe/Cake.MiniCover
+description: |-
+  A Cake Addin for <a href="https://github.com/lucaslorentz/minicover" target="_blank">Minicover</a>, making it as easy as possible to get cross-platform code coverage on dotnet core.

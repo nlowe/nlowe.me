@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body class="blue-grey darken-4 grey-text text-lighten-4">
+        {{- partial "nav.html" . -}}
+        <div class="container" id="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/{{ .Site.Params.theme.materializeVersion | default .Site.Data.default.theme.materializeVersion }}/js/materialize.min.js"></script>
+        <script src="/site.js"></script>
+    </body>
+</html>

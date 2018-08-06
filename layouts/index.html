@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="row">
+    <div class="col s12 center-align">
+        <img class="profile" src="/profile.jpeg" />
+    </div>
+</div>
+<div class="row flow-text">
+    <div class="col s12 center-align">
+        <h2>About Me</h2>
+    </div>
+    <div class="col s12 center-align">
+        I am a DevOps Engineer for <a href="https://www.hyland.com/" target="_blank">Hyland Software</a>.
+        I've been interested in technology for as long as I can remember.
+        I started taking apart electronics in my parents' garage when I
+        was still in elementary school. From there, I taught myself Java,
+        and picked up C# and Go at my current Employer. I love Linux, Open
+        Source, and Technical Theatre, and I always appreciate a good challenge!
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 center-align">
+        <h3>What I'm Working On</h3>
+    </div>
+    {{ range .Site.Data.activeRepos }}
+    <div class="col s12 m4">
+        <div class="card blue-grey darken-3 z-depth-3">
+            <div class="card-content white-text">
+                <span class="card-title">{{ .title }}<a class="right" href="{{ .link }}" target="_blank"><img style="width:24px;" src="github.png"/></a></span>
+                <p>{{ .description | markdownify }}</p>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

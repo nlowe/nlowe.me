@@ -1,0 +1,15 @@
+baseURL = "https://nlowe.me"
+languageCode = "en-us"
+title = "Nathan Lowe"
+MetaDataFormat = "yaml"
+
+# Code Hilighting
+pygmentsCodefences = true
+
+[permalinks]
+page = "/:title/"
+about = "/:filename/"
+
+[params]
+author = "Nathan Lowe"
+website = "nlowe.me"

@@ -1,0 +1,49 @@
+@media only screen and (min-width: 768px) {
+    /* Add some padding on desktop */
+    .site-title {
+        padding-left: 2rem !important;
+    }
+}
+
+.nav-icon-link {
+    margin-top: 8px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+.nav-mobile-icon {
+    margin-right: 1rem;
+    max-width: 36px;
+    vertical-align: middle;
+}
+
+#nav-mobile li {
+    padding-bottom: 0.5rem;
+}
+
+#nav-mobile li>a {
+    color: inherit;
+}
+
+#content {
+    width: 90%;
+}
+
+pre {
+    /* Some padding to make things nice to look at */
+    padding: 1rem;
+
+    /* Enable scrolling */
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+
+    /* No flow-text for code blocks */
+    font-size: 1rem;
+}
+
+.profile {
+    margin-top: 2rem;
+    border-radius: 50%;
+    width: 10rem;
+}

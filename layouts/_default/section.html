@@ -1,0 +1,33 @@
+{{ define "main" }}
+    {{ .Content }}
+    <div class="row">
+        {{ if .Paginator.Pages }}
+            {{ range .Paginator.Pages }}
+            <div class="col m6 s12">
+                <div class="card blue-grey darken-3">
+                    <div class="card-content">
+                        <span class="card-title">{{.Date.Format "2006-01-02"}} | {{ .Title }}</span>
+                        <p>
+                            {{- if .Description }}
+                                {{ .Description }}
+                            {{- else }}
+                                {{ .Summary }}
+                            {{- end }}
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{ .Permalink }}">More</a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        {{ else }}
+        <div class="col s12 center" style="margin-top: 4rem;">
+            <i class="material-icons large">battery_alert</i>
+            <p class="flow-text center-text">
+                There's nothing here yet, check back later!
+            </p>
+        </div>
+        {{ end }}
+    </div>
+{{ end }}
